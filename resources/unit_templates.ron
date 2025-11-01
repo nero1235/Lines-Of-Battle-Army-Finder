@@ -1,0 +1,878 @@
+Templates(
+    units: [
+            UnitTemplate(
+                name: "Line Infantry",
+                unit_type: Infantry,
+                unit_stats: UnitStats(
+                    manpower_cost: 200,
+                    gold_cost: 50,
+                    hp: 800,
+                    organization: 500,
+                    stamina: Some(1700),
+                    melee_attack: 46,
+                    melee_defense: 30,
+                    charge_penetration: 50,
+                    charge_resistance: 65,
+                    ranged_stats: Some(
+                        RangedStats(
+                            bands: [
+                                RangedBand(
+                                    ranged_attack: 24,
+                                    start: 0,
+                                    end: 20,
+                                    start_damage_modifier: 550,
+                                    end_damage_modifier: 550,
+                                    org_damage_ratio: 250,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 24,
+                                    start: 20,
+                                    end: 45,
+                                    start_damage_modifier: 600,
+                                    end_damage_modifier: 200,
+                                    org_damage_ratio: 250,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 24,
+                                    start: 20,
+                                    end: 45,
+                                    start_damage_modifier: 200,
+                                    end_damage_modifier: -30,
+                                    org_damage_ratio: 250,
+                                ),
+
+                            ]
+                        )
+                    ),
+
+                    has_skirmishers: true
+                    )
+            ),
+            UnitTemplate(
+                name: "Guards Infantry",
+                unit_type: Infantry,
+                unit_stats: UnitStats(
+                    manpower_cost: 275,
+                    gold_cost: 75,
+                    hp: 1000,
+                    organization: 600,
+                    stamina: Some(1900),
+                    melee_attack: 47,
+                    melee_defense: 31,
+                    charge_penetration: 60,
+                    charge_resistance: 70,
+                    ranged_stats: Some(
+                        RangedStats(
+                            bands: [
+                                RangedBand(
+                                    ranged_attack: 24,
+                                    start: 0,
+                                    end: 20,
+                                    start_damage_modifier: 550,
+                                    end_damage_modifier: 550,
+                                    org_damage_ratio: 250,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 24,
+                                    start: 20,
+                                    end: 45,
+                                    start_damage_modifier: 600,
+                                    end_damage_modifier: 200,
+                                    org_damage_ratio: 250,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 24,
+                                    start: 20,
+                                    end: 45,
+                                    start_damage_modifier: 200,
+                                    end_damage_modifier: -30,
+                                    org_damage_ratio: 250,
+                                ),
+
+                            ]
+                        )
+                    ),
+
+                    has_skirmishers: true
+                    )
+            ),
+            UnitTemplate(
+                name: "Light Infantry",
+                unit_type: Infantry,
+                unit_stats: UnitStats(
+                    manpower_cost: 225,
+                    gold_cost: 75,
+                    hp: 800,
+                    organization: 525,
+                    stamina: Some(1950),
+                    melee_attack: 46,
+                    melee_defense: 30,
+                    charge_penetration: 50,
+                    charge_resistance: 65,
+                    ranged_stats: Some(
+                        RangedStats(
+                            bands: [
+                                RangedBand(
+                                    ranged_attack: 30,
+                                    start: 0,
+                                    end: 20,
+                                    start_damage_modifier: 550,
+                                    end_damage_modifier: 550,
+                                    org_damage_ratio: 250,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 30,
+                                    start: 20,
+                                    end: 45,
+                                    start_damage_modifier: 600,
+                                    end_damage_modifier: 200,
+                                    org_damage_ratio: 250,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 30,
+                                    start: 20,
+                                    end: 45,
+                                    start_damage_modifier: 200,
+                                    end_damage_modifier: -30,
+                                    org_damage_ratio: 250,
+                                ),
+
+                            ]
+                        )
+                    ),
+
+                    has_skirmishers: true
+                    )
+            ),
+            UnitTemplate(
+                name: "Militia",
+                unit_type: Infantry,
+                unit_stats: UnitStats(
+                    manpower_cost: 125,
+                    gold_cost: 50,
+                    hp: 600,
+                    organization: 500,
+                    stamina: Some(1300),
+                    melee_attack: 32,
+                    melee_defense: 23,
+                    charge_penetration: 25,
+                    charge_resistance: 10,
+                    ranged_stats: Some(
+                        RangedStats(
+                            bands: [
+                                RangedBand(
+                                    ranged_attack: 23,
+                                    start: 0,
+                                    end: 20,
+                                    start_damage_modifier: 550,
+                                    end_damage_modifier: 550,
+                                    org_damage_ratio: 250,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 23,
+                                    start: 20,
+                                    end: 45,
+                                    start_damage_modifier: 600,
+                                    end_damage_modifier: 200,
+                                    org_damage_ratio: 250,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 23,
+                                    start: 20,
+                                    end: 45,
+                                    start_damage_modifier: 200,
+                                    end_damage_modifier: -30,
+                                    org_damage_ratio: 250,
+                                ),
+
+                            ]
+                        )
+                    ),
+
+                    has_skirmishers: false
+                    )
+            ),
+            UnitTemplate(
+                name: "Grenadiers",
+                unit_type: Infantry,
+                unit_stats: UnitStats(
+                    manpower_cost: 250,
+                    gold_cost: 50,
+                    hp: 800,
+                    organization: 580,
+                    stamina: Some(1800),
+                    melee_attack: 48,
+                    melee_defense: 33,
+                    charge_penetration: 70,
+                    charge_resistance: 70,
+                    ranged_stats: Some(
+                        RangedStats(
+                            bands: [
+                                RangedBand(
+                                    ranged_attack: 25,
+                                    start: 0,
+                                    end: 20,
+                                    start_damage_modifier: 550,
+                                    end_damage_modifier: 550,
+                                    org_damage_ratio: 250,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 25,
+                                    start: 20,
+                                    end: 45,
+                                    start_damage_modifier: 600,
+                                    end_damage_modifier: 200,
+                                    org_damage_ratio: 250,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 25,
+                                    start: 20,
+                                    end: 45,
+                                    start_damage_modifier: 200,
+                                    end_damage_modifier: -30,
+                                    org_damage_ratio: 250,
+                                ),
+
+                            ]
+                        )
+                    ),
+
+                    has_skirmishers: true
+                    )
+            ),
+            UnitTemplate(
+                name: "Dragoons",
+                unit_type: Cavalry,
+                unit_stats: UnitStats(
+                    manpower_cost: 125,
+                    gold_cost: 75,
+                    hp: 550,
+                    organization: 575,
+                    stamina: Some(1250),
+                    melee_attack: 38,
+                    melee_defense: 29,
+                    charge_penetration: 28,
+                    charge_resistance: -35,
+                    ranged_stats: None,
+                    has_skirmishers: false
+                    )
+            ),
+            UnitTemplate(
+                name: "Lancers",
+                unit_type: Cavalry,
+                unit_stats: UnitStats(
+                    manpower_cost: 125,
+                    gold_cost: 100,
+                    hp: 500,
+                    organization: 575,
+                    stamina: Some(1300),
+                    melee_attack: 35,
+                    melee_defense: 19,
+                    charge_penetration: 45,
+                    charge_resistance: -45,
+                    ranged_stats: None,
+                    has_skirmishers: false
+                    )
+            ),
+            UnitTemplate(
+                name: "Cuirassiers",
+                unit_type: Cavalry,
+                unit_stats: UnitStats(
+                    manpower_cost: 150,
+                    gold_cost: 100,
+                    hp: 600,
+                    organization: 600,
+                    stamina: Some(1150),
+                    melee_attack: 40,
+                    melee_defense: 32,
+                    charge_penetration: 40,
+                    charge_resistance: -20,
+                    ranged_stats: None,
+                    has_skirmishers: false
+                    )
+            ),
+            UnitTemplate(
+                name: "Hussars",
+                unit_type: Cavalry,
+                unit_stats: UnitStats(
+                    manpower_cost: 125,
+                    gold_cost: 50,
+                    hp: 400,
+                    organization: 575,
+                    stamina: Some(1600),
+                    melee_attack: 34,
+                    melee_defense: 19,
+                    charge_penetration: 18,
+                    charge_resistance: -45,
+                    ranged_stats: None,
+                    has_skirmishers: false
+                    )
+            ),
+            UnitTemplate(
+                name: "8-lb Foot Artillery",
+                unit_type: Artillery,
+                unit_stats: UnitStats(
+                    manpower_cost: 25,
+                    gold_cost: 175,
+                    hp: 800,
+                    organization: 300,
+                    stamina: None,
+                    melee_attack: 6,
+                    melee_defense: 7,
+                    charge_penetration: 0,
+                    charge_resistance: -100,
+                    ranged_stats: Some(
+                        RangedStats(
+                            bands: [
+                                RangedBand(
+                                    ranged_attack: 47,
+                                    start: 0,
+                                    end: 69,
+                                    start_damage_modifier: 310,
+                                    end_damage_modifier: 260,
+                                    org_damage_ratio: 185,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 47,
+                                    start: 69,
+                                    end: 135,
+                                    start_damage_modifier: 260,
+                                    end_damage_modifier: 75,
+                                    org_damage_ratio: 185,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 47,
+                                    start: 135,
+                                    end: 240,
+                                    start_damage_modifier: 10,
+                                    end_damage_modifier: 0,
+                                    org_damage_ratio: 170,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 47,
+                                    start: 240,
+                                    end: 435,
+                                    start_damage_modifier: -5,
+                                    end_damage_modifier: -75,
+                                    org_damage_ratio: 170,
+                                ),
+                            ]
+                        )
+                    ),
+                    has_skirmishers: false
+                    )
+            ),
+            UnitTemplate(
+                name: "6-lb Horse Artillery",
+                unit_type: Artillery,
+                unit_stats: UnitStats(
+                    manpower_cost: 50,
+                    gold_cost: 150,
+                    hp: 800,
+                    organization: 300,
+                    stamina: None,
+                    melee_attack: 6,
+                    melee_defense: 7,
+                    charge_penetration: 0,
+                    charge_resistance: -100,
+                    ranged_stats: Some(
+                        RangedStats(
+                            bands: [
+                                RangedBand(
+                                    ranged_attack: 43,
+                                    start: 0,
+                                    end: 69,
+                                    start_damage_modifier: 310,
+                                    end_damage_modifier: 240,
+                                    org_damage_ratio: 185,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 43,
+                                    start: 69,
+                                    end: 120,
+                                    start_damage_modifier: 240,
+                                    end_damage_modifier: 100,
+                                    org_damage_ratio: 185,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 43,
+                                    start: 120,
+                                    end: 220,
+                                    start_damage_modifier: 15,
+                                    end_damage_modifier: 0,
+                                    org_damage_ratio: 170,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 43,
+                                    start: 220,
+                                    end: 400,
+                                    start_damage_modifier: -5,
+                                    end_damage_modifier: -80,
+                                    org_damage_ratio: 170,
+                                ),
+                            ]
+                        )
+                    ),
+                    has_skirmishers: false
+                    )
+            ),
+            UnitTemplate(
+                name: "6-in Howitzer",
+                unit_type: Artillery,
+                unit_stats: UnitStats(
+                    manpower_cost: 50,
+                    gold_cost: 125,
+                    hp: 600,
+                    organization: 300,
+                    stamina: None,
+                    melee_attack: 6,
+                    melee_defense: 7,
+                    charge_penetration: 0,
+                    charge_resistance: -100,
+                    ranged_stats: Some(
+                        RangedStats(
+                            bands: [
+                                RangedBand(
+                                    ranged_attack: 33,
+                                    start: 0,
+                                    end: 69,
+                                    start_damage_modifier: 700,
+                                    end_damage_modifier: 500,
+                                    org_damage_ratio: 185,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 33,
+                                    start: 0,
+                                    end: 69,
+                                    start_damage_modifier: 0,
+                                    end_damage_modifier: 0,
+                                    org_damage_ratio: 185,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 33,
+                                    start: 69,
+                                    end: 200,
+                                    start_damage_modifier: 15,
+                                    end_damage_modifier: 0,
+                                    org_damage_ratio: 185,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 33,
+                                    start: 200,
+                                    end: 340,
+                                    start_damage_modifier: 0,
+                                    end_damage_modifier: -30,
+                                    org_damage_ratio: 185,
+                                ),
+                            ]
+                        )
+                    ),
+                    has_skirmishers: false
+                    )
+            ),
+            UnitTemplate(
+                name: "12-lb Foot Artillery",
+                unit_type: Artillery,
+                unit_stats: UnitStats(
+                    manpower_cost: 50,
+                    gold_cost: 225,
+                    hp: 800,
+                    organization: 300,
+                    stamina: None,
+                    melee_attack: 6,
+                    melee_defense: 7,
+                    charge_penetration: 0,
+                    charge_resistance: -100,
+                    ranged_stats: Some(
+                        RangedStats(
+                            bands: [
+                                RangedBand(
+                                    ranged_attack: 54,
+                                    start: 0,
+                                    end: 69,
+                                    start_damage_modifier: 250,
+                                    end_damage_modifier: 210,
+                                    org_damage_ratio: 185,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 54,
+                                    start: 69,
+                                    end: 145,
+                                    start_damage_modifier: 210,
+                                    end_damage_modifier: 50,
+                                    org_damage_ratio: 185,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 54,
+                                    start: 145,
+                                    end: 250,
+                                    start_damage_modifier: 10,
+                                    end_damage_modifier: 0,
+                                    org_damage_ratio: 170,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 54,
+                                    start: 250,
+                                    end: 500,
+                                    start_damage_modifier: -10,
+                                    end_damage_modifier: -80,
+                                    org_damage_ratio: 170,
+                                ),
+                            ]
+                        )
+                    ),
+                    has_skirmishers: false
+                    )
+            ),
+            UnitTemplate(
+                name: "4-lb Foot Artillery",
+                unit_type: Artillery,
+                unit_stats: UnitStats(
+                    manpower_cost: 25,
+                    gold_cost: 125,
+                    hp: 800,
+                    organization: 300,
+                    stamina: None,
+                    melee_attack: 6,
+                    melee_defense: 7,
+                    charge_penetration: 0,
+                    charge_resistance: -100,
+                    ranged_stats: Some(
+                        RangedStats(
+                            bands: [
+                                RangedBand(
+                                    ranged_attack: 40,
+                                    start: 0,
+                                    end: 69,
+                                    start_damage_modifier: 260,
+                                    end_damage_modifier: 200,
+                                    org_damage_ratio: 185,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 40,
+                                    start: 69,
+                                    end: 110,
+                                    start_damage_modifier: 200,
+                                    end_damage_modifier: 110,
+                                    org_damage_ratio: 185,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 40,
+                                    start: 110,
+                                    end: 200,
+                                    start_damage_modifier: 15,
+                                    end_damage_modifier: 0,
+                                    org_damage_ratio: 165,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 40,
+                                    start: 200,
+                                    end: 375,
+                                    start_damage_modifier: -10,
+                                    end_damage_modifier: -75,
+                                    org_damage_ratio: 165,
+                                ),
+                            ]
+                        )
+                    ),
+                    has_skirmishers: false
+                    )
+            ),
+            UnitTemplate(
+                name: "6-lb Foot Artillery",
+                unit_type: Artillery,
+                unit_stats: UnitStats(
+                    manpower_cost: 25,
+                    gold_cost: 150,
+                    hp: 800,
+                    organization: 300,
+                    stamina: None,
+                    melee_attack: 6,
+                    melee_defense: 7,
+                    charge_penetration: 0,
+                    charge_resistance: -100,
+                    ranged_stats: Some(
+                        RangedStats(
+                            bands: [
+                                RangedBand(
+                                    ranged_attack: 43,
+                                    start: 0,
+                                    end: 69,
+                                    start_damage_modifier: 310,
+                                    end_damage_modifier: 240,
+                                    org_damage_ratio: 185,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 43,
+                                    start: 69,
+                                    end: 120,
+                                    start_damage_modifier: 240,
+                                    end_damage_modifier: 100,
+                                    org_damage_ratio: 185,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 43,
+                                    start: 120,
+                                    end: 220,
+                                    start_damage_modifier: 15,
+                                    end_damage_modifier: 0,
+                                    org_damage_ratio: 170,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 43,
+                                    start: 220,
+                                    end: 400,
+                                    start_damage_modifier: -5,
+                                    end_damage_modifier: -80,
+                                    org_damage_ratio: 170,
+                                ),
+                            ]
+                        )
+                    ),
+                    has_skirmishers: false
+                    )
+            ),
+            UnitTemplate(
+                name: "10-lb Licorne",
+                unit_type: Artillery,
+                unit_stats: UnitStats(
+                    manpower_cost: 50,
+                    gold_cost: 150,
+                    hp: 600,
+                    organization: 300,
+                    stamina: None,
+                    melee_attack: 6,
+                    melee_defense: 7,
+                    charge_penetration: 0,
+                    charge_resistance: -100,
+                    ranged_stats: Some(
+                        RangedStats(
+                            bands: [
+                                RangedBand(
+                                    ranged_attack: 38,
+                                    start: 0,
+                                    end: 69,
+                                    start_damage_modifier: 350,
+                                    end_damage_modifier: 300,
+                                    org_damage_ratio: 185,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 38,
+                                    start: 69,
+                                    end: 105,
+                                    start_damage_modifier: 300,
+                                    end_damage_modifier: 80,
+                                    org_damage_ratio: 185,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 38,
+                                    start: 105,
+                                    end: 250,
+                                    start_damage_modifier: 20,
+                                    end_damage_modifier: 0,
+                                    org_damage_ratio: 170,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 38,
+                                    start: 250,
+                                    end: 425,
+                                    start_damage_modifier: -40,
+                                    end_damage_modifier: -55,
+                                    org_damage_ratio: 185,
+                                ),
+                            ]
+                        )
+                    ),
+                    has_skirmishers: false
+                    )
+            ),
+            UnitTemplate(
+                name: "18-lb Licorne",
+                unit_type: Artillery,
+                unit_stats: UnitStats(
+                    manpower_cost: 50,
+                    gold_cost: 200,
+                    hp: 600,
+                    organization: 300,
+                    stamina: None,
+                    melee_attack: 6,
+                    melee_defense: 7,
+                    charge_penetration: 0,
+                    charge_resistance: -100,
+                    ranged_stats: Some(
+                        RangedStats(
+                            bands: [
+                                RangedBand(
+                                    ranged_attack: 46,
+                                    start: 0,
+                                    end: 69,
+                                    start_damage_modifier: 330,
+                                    end_damage_modifier: 310,
+                                    org_damage_ratio: 185,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 46,
+                                    start: 69,
+                                    end: 110,
+                                    start_damage_modifier: 310,
+                                    end_damage_modifier: 70,
+                                    org_damage_ratio: 185,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 46,
+                                    start: 110,
+                                    end: 310,
+                                    start_damage_modifier: 15,
+                                    end_damage_modifier: -5,
+                                    org_damage_ratio: 170,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 46,
+                                    start: 310,
+                                    end: 550,
+                                    start_damage_modifier: -45,
+                                    end_damage_modifier: -65,
+                                    org_damage_ratio: 185,
+                                ),
+                            ]
+                        )
+                    ),
+                    has_skirmishers: false
+                    )
+            ),
+            UnitTemplate(
+                name: "Rocket battery",
+                unit_type: Artillery,
+                unit_stats: UnitStats(
+                    manpower_cost: 25,
+                    gold_cost: 225,
+                    hp: 600,
+                    organization: 300,
+                    stamina: None,
+                    melee_attack: 6,
+                    melee_defense: 7,
+                    charge_penetration: 0,
+                    charge_resistance: -100,
+                    ranged_stats: Some(
+                        RangedStats(
+                            bands: [
+                                RangedBand(
+                                    ranged_attack: 20,
+                                    start: 0,
+                                    end: 150,
+                                    start_damage_modifier: 75,
+                                    end_damage_modifier: 75,
+                                    org_damage_ratio: 380,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 20,
+                                    start: 150,
+                                    end: 270,
+                                    start_damage_modifier: 75,
+                                    end_damage_modifier: -40,
+                                    org_damage_ratio: 380,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 20,
+                                    start: 270,
+                                    end: 450,
+                                    start_damage_modifier: -35,
+                                    end_damage_modifier: -90,
+                                    org_damage_ratio: 380,
+                                ),
+                            ]
+                        )
+                    ),
+                    has_skirmishers: false
+                    )
+            ),
+            UnitTemplate(
+                name: "Rifles",
+                unit_type: SkirmishInfantry,
+                unit_stats: UnitStats(
+                    manpower_cost: 50,
+                    gold_cost: 25,
+                    hp: 150,
+                    organization: 600,
+                    stamina: Some(2250),
+                    melee_attack: 21,
+                    melee_defense: 12,
+                    charge_penetration: 0,
+                    charge_resistance: -45,
+                    ranged_stats: Some(
+                        RangedStats(
+                            bands: [
+                                RangedBand(
+                                    ranged_attack: 11,
+                                    start: 0,
+                                    end: 75,
+                                    start_damage_modifier: 150,
+                                    end_damage_modifier: 35,
+                                    org_damage_ratio: 500,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 11,
+                                    start: 75,
+                                    end: 120,
+                                    start_damage_modifier: 35,
+                                    end_damage_modifier: -15,
+                                    org_damage_ratio: 500,
+                                )
+
+                            ]
+                        )
+                    ),
+
+                    has_skirmishers: true
+                    )
+            ),
+            UnitTemplate(
+                name: "Skirmishers",
+                unit_type: SkirmishInfantry,
+                unit_stats: UnitStats(
+                    manpower_cost: 0,
+                    gold_cost: 0,
+                    hp: 150,
+                    organization: 600,
+                    stamina: Some(2100),
+                    melee_attack: 21,
+                    melee_defense: 12,
+                    charge_penetration: 0,
+                    charge_resistance: -40,
+                    ranged_stats: Some(
+                        RangedStats(
+                            bands: [
+                                RangedBand(
+                                    ranged_attack: 11,
+                                    start: 0,
+                                    end: 45,
+                                    start_damage_modifier: 300,
+                                    end_damage_modifier: 200,
+                                    org_damage_ratio: 435,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 11,
+                                    start: 45,
+                                    end: 75,
+                                    start_damage_modifier: 150,
+                                    end_damage_modifier: 25,
+                                    org_damage_ratio: 500,
+                                ),
+                                RangedBand(
+                                    ranged_attack: 11,
+                                    start: 75,
+                                    end: 120,
+                                    start_damage_modifier: 25,
+                                    end_damage_modifier: -35,
+                                    org_damage_ratio: 500,
+                                )
+
+                            ]
+                        )
+                    ),
+
+                    has_skirmishers: false
+                    )
+            ),
+            ]
+)
