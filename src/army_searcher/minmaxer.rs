@@ -2,6 +2,7 @@ use std::cmp::min;
 use crate::prelude::*;
 use good_lp::*;
 use good_lp::scip;
+use crate::Errors;
 use crate::units::unit_templates::Templates;
 
 #[derive(Clone, Debug, PartialEq, Eq)]
@@ -71,7 +72,7 @@ pub struct Constraint
     pub minimum_hp: Option<i32>,
     pub minimum_ehp_vs_sources: Option<Vec<(String, i32)>>,
     pub minimum_damage_at_ranges: Option<Vec<(i32, i32)>>,
-
+    //pub minimum_odp_at_ranges: Option<Vec<(i32, i32)>>,
 
     pub minimum_melee_damage: Option<i32>,
     pub minimum_melee_damage_over_types: Option<Vec<(UnitTypes, i32)>>,
@@ -197,6 +198,29 @@ impl Constraint
             allowed_units: allowed_units.clone(),
             minimum_gold_target,
             minimum_manpower_target
+        }
+    }
+
+    pub fn try_push_ehp_vs_source(&mut self, source: &str, ehp: i32) -> Result<(), Errors>
+    {
+        let valid_unit =
+            {
+                generate_units().iter().any(
+                    |u| u.name == source
+                )
+            };
+        if !valid_unit {
+            return Err(Errors::InvalidInput);
+        }
+        else {
+            if let Some(v) = &mut self.minimum_ehp_vs_sources {
+                v.push((source.to_string(), ehp));
+                Ok(())
+            }
+            else {
+                self.minimum_ehp_vs_sources = Some(vec![(source.to_string(), ehp)]);
+                Ok(())
+            }
         }
     }
 }
@@ -685,6 +709,7 @@ pub fn search_paths(preset: Option<ArmyComposition>, manpower_budget: i32, gold_
 }
 pub fn search_optimal(preset: Option<ArmyComposition>, manpower_budget: i32, gold_budget: i32, constraints: Constraint, mode: GameModes, units: &Vec<Unit>, num_comps: usize) -> Vec<ArmyComposition>
 {
+    let mut constraints = constraints;
     let mut purchasable_units: Vec<Unit> = units
         .iter()
         .filter(|u| u.unit_stats.gold_cost > 0 || u.unit_stats.manpower_cost > 0)
@@ -712,6 +737,14 @@ pub fn search_optimal(preset: Option<ArmyComposition>, manpower_budget: i32, gol
                                 manpower_budget / get_cheapest_of_unit_by_manpower(&purchasable_units, UnitTypes::Artillery));
     let maximum_rifles = mode.get_maximum_rifles();
     let maximum_rockets = mode.get_maximum_rockets();
+    if constraints.maximum_rockets.is_none()
+    {
+        constraints.maximum_rockets = Some(maximum_rockets);
+    }
+    if constraints.maximum_rifles.is_none()
+    {
+        constraints.maximum_rifles = Some(maximum_rifles);
+    }
     let hard_cap = i32::max(maximum_infantry, i32::max(maximum_artillery, maximum_cavalry));
     let budget = Budget{gold: gold_budget, manpower: manpower_budget};
     optimize_k(&constraints, &budget, &purchasable_units, constraints.clone().maximization_targets.unwrap(), num_comps, hard_cap, mode)

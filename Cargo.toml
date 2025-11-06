@@ -9,4 +9,5 @@ edition = "2024"
 serde = { version = "*", features = ["derive"] }
 ron = "*"
 good_lp = { version = "*", features = ["scip_bundled", "scip"], default-features = false}
-
+egui = "*"
+eframe = "*"

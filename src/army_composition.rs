@@ -70,6 +70,57 @@ impl ArmyComposition
             unit_roster: Vec::new()
         }
     }
+    pub fn default_for_mode(mode: GameModes) -> Self
+    {
+        if mode == GameModes::Clash
+        {
+            let mut base = Self::new(mode);
+            base.add_units_by_name("Line Infantry", 9);
+            base.add_units_by_name("Grenadiers", 3);
+            base.add_units_by_name("Dragoons", 4);
+            base.add_units_by_name("6-lb Horse Artillery", 2);
+            base.add_units_by_name("Rifles", 3);
+            base
+
+        }
+        else if mode == GameModes::Combat
+        {
+            let mut base = Self::new(mode);
+            base.add_units_by_name("Line Infantry", 18);
+            base.add_units_by_name("Grenadiers", 4);
+            base.add_units_by_name("Dragoons", 6);
+            base.add_units_by_name("Hussars", 4);
+            base.add_units_by_name("12-lb Foot Artillery", 1);
+            base.add_units_by_name("6-lb Foot Artillery", 4);
+            base
+        }
+        else if mode == GameModes::Battle
+        {
+            let mut base = Self::new(mode);
+            base.add_units_by_name("Line Infantry", 28);
+            base.add_units_by_name("Grenadiers", 6);
+            base.add_units_by_name("Dragoons", 15);
+            base.add_units_by_name("Hussars", 6);
+            base.add_units_by_name("12-lb Foot Artillery", 2);
+            base.add_units_by_name("6-lb Foot Artillery", 7);
+            base
+
+        }
+        else if mode == GameModes::GrandBattle
+        {
+            let mut base = Self::new(mode);
+            base.add_units_by_name("Line Infantry", 60);
+            base.add_units_by_name("Grenadiers", 4);
+            base.add_units_by_name("Dragoons", 24);
+            base.add_units_by_name("Hussars", 8);
+            base.add_units_by_name("12-lb Foot Artillery", 6);
+            base.add_units_by_name("6-lb Foot Artillery", 8);
+            base
+        }
+        else {
+            unreachable!()
+        }
+    }
     pub fn get_gold_cost(&self) -> i32
     {
         self.unit_roster.iter().fold(

@@ -1,6 +1,7 @@
 use crate::army_composition::GameModes;
 use crate::army_searcher::minmaxer::{Constraint, ConstraintBuilder, MaximizationTargets};
 use crate::army_searcher::minmaxer::MaximizationTargets::{DamageAtRange, DamageOverBand, EHPVsSource};
+use crate::gui::GuiApp;
 use crate::prelude::ArmyComposition;
 use crate::prelude::GameModes::{Battle, Combat};
 use crate::units::{generate_units, UnitTypes};
@@ -9,14 +10,23 @@ use crate::units::{generate_units, UnitTypes};
 mod units;
 mod army_composition;
 mod army_searcher;
+mod gui;
 
 mod prelude{
     pub use crate::units::*;
     pub use crate::army_composition::*;
+    pub use crate::army_searcher::*;
+    pub use crate::gui::*;
 }
+#[derive(Clone, Debug, Copy, PartialEq, Eq)]
+pub enum Errors
+{
+    InvalidInput,
 
+}
 fn main() 
 {
+    /*
     let mut default_army = ArmyComposition::new(Combat);
     default_army.add_units_by_name("Line Infantry", 18);
     default_army.add_units_by_name("Grenadiers", 4);
@@ -73,6 +83,11 @@ fn main()
     {
         a.print_composition();
     }
-
+    */
+    let native_options = eframe::NativeOptions::default();
+    eframe::run_native(
+        "Lines of Battle Optimizer",
+        native_options,
+        Box::new(|_cc| Ok(Box::new(GuiApp::new()))));
 
 }
