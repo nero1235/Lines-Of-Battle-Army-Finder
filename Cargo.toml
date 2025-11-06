@@ -1,0 +1,12 @@
+[package]
+name = "lines_of_battle_optimizer"
+version = "0.1.0"
+edition = "2024"
+
+
+
+[dependencies]
+serde = { version = "*", features = ["derive"] }
+ron = "*"
+good_lp = { version = "*", features = ["scip_bundled", "scip"], default-features = false}
+

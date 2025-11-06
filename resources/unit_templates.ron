@@ -31,15 +31,7 @@ Templates(
                                     start_damage_modifier: 600,
                                     end_damage_modifier: 200,
                                     org_damage_ratio: 250,
-                                ),
-                                RangedBand(
-                                    ranged_attack: 24,
-                                    start: 20,
-                                    end: 45,
-                                    start_damage_modifier: 200,
-                                    end_damage_modifier: -30,
-                                    org_damage_ratio: 250,
-                                ),
+                                )
 
                             ]
                         )
@@ -65,7 +57,7 @@ Templates(
                         RangedStats(
                             bands: [
                                 RangedBand(
-                                    ranged_attack: 24,
+                                    ranged_attack: 25,
                                     start: 0,
                                     end: 20,
                                     start_damage_modifier: 550,
@@ -73,22 +65,13 @@ Templates(
                                     org_damage_ratio: 250,
                                 ),
                                 RangedBand(
-                                    ranged_attack: 24,
+                                    ranged_attack: 25,
                                     start: 20,
                                     end: 45,
                                     start_damage_modifier: 600,
                                     end_damage_modifier: 200,
                                     org_damage_ratio: 250,
-                                ),
-                                RangedBand(
-                                    ranged_attack: 24,
-                                    start: 20,
-                                    end: 45,
-                                    start_damage_modifier: 200,
-                                    end_damage_modifier: -30,
-                                    org_damage_ratio: 250,
-                                ),
-
+                                )
                             ]
                         )
                     ),
@@ -127,15 +110,7 @@ Templates(
                                     start_damage_modifier: 600,
                                     end_damage_modifier: 200,
                                     org_damage_ratio: 250,
-                                ),
-                                RangedBand(
-                                    ranged_attack: 30,
-                                    start: 20,
-                                    end: 45,
-                                    start_damage_modifier: 200,
-                                    end_damage_modifier: -30,
-                                    org_damage_ratio: 250,
-                                ),
+                                )
 
                             ]
                         )
@@ -175,15 +150,7 @@ Templates(
                                     start_damage_modifier: 600,
                                     end_damage_modifier: 200,
                                     org_damage_ratio: 250,
-                                ),
-                                RangedBand(
-                                    ranged_attack: 23,
-                                    start: 20,
-                                    end: 45,
-                                    start_damage_modifier: 200,
-                                    end_damage_modifier: -30,
-                                    org_damage_ratio: 250,
-                                ),
+                                )
 
                             ]
                         )
@@ -223,15 +190,7 @@ Templates(
                                     start_damage_modifier: 600,
                                     end_damage_modifier: 200,
                                     org_damage_ratio: 250,
-                                ),
-                                RangedBand(
-                                    ranged_attack: 25,
-                                    start: 20,
-                                    end: 45,
-                                    start_damage_modifier: 200,
-                                    end_damage_modifier: -30,
-                                    org_damage_ratio: 250,
-                                ),
+                                )
 
                             ]
                         )
@@ -438,14 +397,6 @@ Templates(
                                     end: 69,
                                     start_damage_modifier: 700,
                                     end_damage_modifier: 500,
-                                    org_damage_ratio: 185,
-                                ),
-                                RangedBand(
-                                    ranged_attack: 33,
-                                    start: 0,
-                                    end: 69,
-                                    start_damage_modifier: 0,
-                                    end_damage_modifier: 0,
                                     org_damage_ratio: 185,
                                 ),
                                 RangedBand(

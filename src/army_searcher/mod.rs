@@ -1,1 +1,1 @@
-mod minmaxer;
+pub mod minmaxer;
